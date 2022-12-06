@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="watch-history-service" />
+        <module name="movie-service" />
+        <module name="discovery-server" />
+        <module name="configuration-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="configuration-server" target="17" />
+      <module name="discovery-server" target="17" />
+      <module name="movie-service" target="17" />
+      <module name="watch-history-service" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="configuration-server" options="-parameters" />
+      <module name="discovery-server" options="-parameters" />
+      <module name="movie-service" options="-parameters" />
+      <module name="watch-history-service" options="-parameters" />
+    </option>
+  </component>
+</project>

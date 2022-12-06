@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/configuration-server/configuration-server.iml" filepath="$PROJECT_DIR$/configuration-server/configuration-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/movie-service/movie-service.iml" filepath="$PROJECT_DIR$/movie-service/movie-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/watch-history-service/watch-history-service.iml" filepath="$PROJECT_DIR$/watch-history-service/watch-history-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/watchflix backend.iml" filepath="$PROJECT_DIR$/.idea/watchflix backend.iml" />
+    </modules>
+  </component>
+</project>
