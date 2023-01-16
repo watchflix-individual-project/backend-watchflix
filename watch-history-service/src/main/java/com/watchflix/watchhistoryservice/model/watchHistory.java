@@ -1,4 +1,4 @@
-package com.watchflix.watchhistoryservice.entities;
+package com.watchflix.watchhistoryservice.model;
 import javax.persistence.*;
 
 @Entity
@@ -22,4 +22,7 @@ public class watchHistory {
         return id;
     }
 //other setters and getters
+    public void setId(Integer id){
+        this.id=id;
+    }
 }

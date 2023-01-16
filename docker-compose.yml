@@ -1,0 +1,48 @@
+version: '3'
+services:
+  config-server:
+    image: config-server
+    build:
+      context: ./configuration-server
+    ports:
+      - "8082:8082"
+    restart: always
+  discovery-server:
+    image: discovery-server
+    build:
+      context: ./discovery-server
+    ports:
+      - "8761:8761"
+    restart: always
+    depends_on:
+      - config-server
+  movie-service:
+    image: movie-service
+    build:
+      context: ./movie-service
+    ports:
+      - "8090:8090"
+    depends_on:
+      - discovery-server
+      - config-server
+    restart: always
+  watch-history-service:
+    image: watch-history-service
+    build:
+      context: ./watch-history-service
+    depends_on:
+      - mysql
+      - discovery-server
+      - config-server
+    ports:
+      - "8081:8081"
+    restart: always
+  mysql:
+    image: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_PASSWORD=rPvQCTpUgi4NZ5T
+      - MYSQL_USER=root
+      - MYSQL_DB=watchflix
